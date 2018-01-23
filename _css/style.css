@@ -19,11 +19,6 @@
 		font-weight:bold;
 	}
 
-	/* Visitado */
-	a:visited{
-		color:#868E96 !important;
-	}
-
 	/* On hover */
 	a:hover{
 		color:#868E96 !important;
@@ -31,7 +26,7 @@
 
 	/* Ativo */
 	a:active{
-		color:#F7F7F7 !important;
+		color:#dbdbdb !important;
 	}
 
 /* ------------------------------------------------------------------ */
