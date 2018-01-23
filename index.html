@@ -1,0 +1,638 @@
+<html>
+<!-- Cabeçalho -->
+<head>
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Sorteie e distribua cargos de forma fácil, enquanto joga Guerras Civis."/>
+	<meta name="keywords" content="habbo,guerras,sortear,sorteio,sorte,civis,guerrascivis,billy,gates,ferramenta,hotel,jogar,hp"/>
+	<meta name="author" content="BillyGates">
+	<meta name="robots" content="index, follow">
+	<meta name="revisit-after" content="3 month">
+	
+	<!-- Título -->
+	<title>Guerras Civis - Sorteador</title>
+	
+	<!-- Estilos e icones -->
+		<!-- CSS Puro -->
+		<link rel="stylesheet" href="_css/style.css" type="text/css">
+		<!-- CSS Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		<!-- Icone Favorito -->
+		<link rel="icon" href="_img/favicon.ico" type="image/x-icon">
+</head>
+	
+<!-- Corpo -->
+<body>
+	<!-- Container Boostrap -->
+	<div class="container">
+		<div class="row">
+			<!-- Card 1 -->
+			<section id="card-1" class="col-12 col-sm-10 col-md-8 col-lg-6 mx-auto text-center">
+				<article class="card">
+					<!-- Cabeçalho -->
+					<header class="card-header">
+						<img class="best-host d-none d-sm-block" src="_img/cup.png" width="14px" height="14px" data-toggle="modal" data-target="#modalBestHost">
+						
+						<span class="help d-none d-sm-block" data-toggle="modal" data-target="#modalDicas">?</span>
+						
+						<h1 class="">Quantidade</h1>
+					</header>
+					
+					<!-- Corpo -->
+					<p>
+						<form class="card-body">
+							<!-- Row -->
+							<div class="row ">
+								<!-- Col -->
+								<label class="col-12 col-sm-4 col-lg-5 card-input mx-auto checked" id="label-opt12">
+									<input type="radio" name="many" class="sr-only" id="opt12" onclick="radioCheck();" checked>12
+								</label>
+								
+								<!-- Col -->
+								<label class="col-12 col-sm-4 col-lg-5 card-input mx-auto" id="label-opt14">
+									<input type="radio" name="many" class="sr-only" id="opt14" onclick="radioCheck();">14
+								</label>
+							</div>
+							
+							<!-- Row -->
+							<div class="row">
+								<!-- Col -->
+								<label class="col-12 col-sm-4 col-lg-5 card-input mx-auto" id="label-opt16">
+									<input type="radio" name="many" class="sr-only" id="opt16" onclick="radioCheck();">16
+								</label>
+								
+								<!-- Col -->
+								<label class="col-12 col-sm-4 col-lg-5 card-input mx-auto" id="label-opt18">
+									<input type="radio" name="many" class="sr-only" id="opt18" onclick="radioCheck();">18
+								</label>
+							</div>
+							
+							<!-- Botão -->
+							<button class="btn btn-secondary w-100 mt-3" type="button" onclick="firstChange();inputReset();extras();extraTitle();createInput();extrasReset();backup();">
+								Próximo
+							</button>
+						</form>
+					</p>
+					
+					<!-- Rodapé -->
+					<footer class="card-footer text-muted=">
+						<!-- Créditos -->
+						Site desenvolvido pelo habbo<a href="https://www.habbo.com.br/profile/BillyGates" target="_blank"> BillyGates</a>.
+					</footer>
+				</article>
+			</section>
+			
+			<!-- Card 2 -->
+			<section id="card-2" class="col-12 col-sm-10 col-md-8 col-xl-6 mx-auto my-5 my-sm-0 text-center hide">
+				<article class="card" id="card2">
+					<!-- Cabeçalho -->
+					<header class="card-header">
+						<img class="best-host d-none d-sm-block" src="_img/cup.png" width="14px" height="14px" data-toggle="modal" data-target="#modalBestHost">
+						
+						<span class="help d-none d-sm-block" data-toggle="modal" data-target="#modalDicas">?</span>
+						
+						<h1>Extras</h1>
+					</header>
+					
+					<!-- Corpo -->
+					<p>
+						<form class="card-body" id="body1">
+							<!-- Título -->
+							<p class="card-title mb-3" id="extra-title"></p>
+							
+							<!-- Row -->
+							<div class="row">
+								<!-- Primeira Col -->
+								<div class="col-12 col-sm-6">
+									<!-- Primeiro Cargo Especial -->
+									<label class="col-12 card-input">
+										<input type="checkbox" name="extra" class="sr-only" onclick="boxCheck(this);allowExtras(this);extraLack();" id="fada">
+										<span id="extraFada">Fada</span>
+									</label>
+									
+									<!-- Segundo Cargo Especial -->
+									<label class="col-12 card-input">
+										<input type="checkbox" name="extra" class="sr-only" onclick="boxCheck(this);allowExtras(this);extraLack();" id="escu">
+										<span id="extraEscu">Escudeiro</span>
+									</label>
+									
+									<!-- Terceiro Cargo Especial -->
+									<label class="col-12 card-input">
+										<input type="checkbox" name="extra" class="sr-only" onclick="boxCheck(this);allowExtras(this);extraLack();" id="just">
+										<span id="extraJust">Justiceiro</span>
+									</label>
+									
+									<!-- Quarto Cargo Especial -->
+									<label class="col-12 card-input">	
+										<input type="checkbox" name="extra" class="sr-only" onclick="boxCheck(this);allowExtras(this);extraLack();" id="testem">
+										<span id="extraTestem">Testem.</span>
+									</label>
+								</div>
+								
+								<!-- Segunda Col -->
+								<div class="col-12 col-sm-6">
+									<!-- Primeiro Cargo Especial -->
+									<label class="col-12 card-input">
+										<input type="checkbox" name="extra" class="sr-only" onclick="boxCheck(this);allowExtras(this);extraLack();" id="hb">
+										<span id="extraHb">H. Bomba</span>
+									</label>
+									
+									<!-- Segundo Cargo Especial -->
+									<label class="col-12 card-input">
+										<input type="checkbox" name="extra" class="sr-only" onclick="boxCheck(this);allowExtras(this);extraLack();" id="psico">
+										<span id="extraPsico">Psicopata</span>
+									</label>
+									
+									<!-- Terceiro Cargo Especial -->
+									<label class="col-12 card-input">
+										<input type="checkbox" name="extra" class="sr-only" onclick="boxCheck(this);allowExtras(this);extraLack();" id="demo">
+										<span id="extraDemo">Demônio</span>
+									</label>
+								</div>
+							</div>
+							
+							<!-- Botões -->
+							<div class="row mt-4">
+								<!-- Voltar -->
+								<div class="col-6">
+									<button class="btn btn-secondary w-100 text-center" type="button" onclick="backToAmount();resetExtras();inputReset();" id="">
+										Anterior
+									</button>
+								</div>
+								
+								<!-- Avançar -->
+								<div class="col-6">
+									<button class="btn btn-secondary w-100" type="button" onclick="validaExtra();">
+										Próximo
+									</button>
+								</div>
+							</div>
+						</form>
+					</p>
+					
+					<!-- Rodapé -->
+					<footer class="card-footer text-muted">
+						<!-- Créditos -->
+						Site desenvolvido pelo habbo <a href="https://www.habbo.com.br/profile/BillyGates" target="_blank">BillyGates</a>.
+					</footer>
+				</article>
+			</section>
+			
+			<!-- Card 3 -->
+			<section id="card-3" class="col-12 col-sm-10 col-md-6 col-lg-4 mx-auto text-center hide">
+				<article class="card">
+					<!-- Cabeçalho -->
+					<header class="card-header">
+						<img class="best-host d-none d-sm-block" src="_img/cup.png" width="14px" height="14px" data-toggle="modal" data-target="#modalBestHost">
+						
+						<span class="help d-none d-sm-block" data-toggle="modal" data-target="#modalDicas">?</span>
+						
+						<h1>Info</h1>
+					</header>
+					
+					<!-- Corpo -->
+					<p>
+						<form class="card-body">
+							<!-- Primeira Row -->
+							<div class="row">
+								<!-- Primeira Opção -->
+								<label for="infoSim" class="col-5 card-input mx-auto checked" id="parentInfoSim">
+									<!-- Primeiro Input Real -->
+									<input type="radio" name="info" id="infoSim" class="mb-3 sr-only" onclick="radioCheckInfo();" checked>
+									
+									<!-- Prieiro Input Estético -->
+									<span class="mb-3">Sim</span>
+								</label>
+								
+								<!-- Segunda Opção -->
+								<label for="infoNao" class="col-5 card-input mx-auto" id="parentInfoNao">
+									<!-- Primeiro Input Real -->
+									<input type="radio" name="info" id="infoNao" class="mb-3 sr-only" onclick="radioCheckInfo();">
+									
+									<!-- Segundo Input Real -->
+									<span class="mb-3">Não</span>
+								</label>
+							</div>
+							
+							<!-- Segunda Row -->
+							<div class="row mt-4">
+								<!-- Voltar -->
+								<div class="col-6">
+									<button class="btn btn-secondary w-100" type="button" onclick="backToAmount();">
+										Anterior
+									</button>
+								</div>
+								
+								<!-- Avançar -->
+								<div class="col-6">
+									<a href="#card-4" class="btn btn-secondary w-100 btn-fix" onclick="thirdChange();showInfo();fillLack();">
+										Próximo
+									</a>
+								</div>
+							</div>
+						</form>
+					</p>
+					
+					<!-- Rodapé -->
+					<footer class="card-footer text-muted text-center">
+						<!-- Créditos -->
+						Site desenvolvido pelo habbo <a href="https://www.habbo.com.br/profile/BillyGates" target="_blank">BillyGates</a>.
+					</footer>
+				</article>
+			</section>
+			
+			<!-- Card 4 -->
+			<section id="card-4" class="col-12 col-sm-10 col-lg-8 mx-auto text-center hide">
+				<article class="card">
+					<!-- Cabeçalho -->
+					<header class="card-header">
+						<img class="best-host d-none d-sm-block" src="_img/cup.png" width="14px" height="14px" data-toggle="modal" data-target="#modalBestHost">
+						
+						<span class="help d-none d-sm-block" data-toggle="modal" data-target="#modalDicas">?</span>
+						
+						<h1>Jogadores</h1>
+					</header>
+					
+					<!-- Corpo -->
+					<p>
+						<form class="card-body" id="body2">
+							<!-- Título -->
+							<p class="card-title mb-3" id="extra-title2"></p>
+							
+							<div class="form-group">
+								<!-- Primeira Row -->
+								<div class="row">
+									<!-- Primeira Coluna de Inputs -->
+									<div class="col-sm-11 mx-auto">
+										<div class="row" id="firstRow"></div>
+									</div>
+									
+									<!-- Segunda Coluna de Inputs -->
+									<div class="col-sm-11 mx-auto">
+										<div class="row" id="secondRow"></div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Botões -->
+							<div class="row">
+								<!-- Anterior -->
+								<button id="inputBack" class="btn btn-secondary w-50 mt-3 mb-2 col-5 mx-auto" type="button" onclick="backToInfo();">
+									Anterior
+								</button>
+								
+								<!-- Sortear -->
+								<a id="inputShuffle" href="#card-5" class="btn btn-secondary w-50 mt-3 mb-2 col-5 mx-auto btn-fix" onclick="validInput();showEspecial();shuffle(nicks);" id="teste">
+									Sorteie!
+								</a>
+								
+								<!-- Salvar -->
+								<a href="#card-5" class="btn btn-secondary w-50 mt-3 mb-2 col-11 mx-auto d-none btn-fix" onclick="corrigeNicks();fourthChange();" id="save">
+									Salvar!
+								</a>
+							</div>
+						</form>
+					</p>
+					
+					<!-- Rodapé -->
+					<footer class="card-footer text-muted">
+						<!-- Créditos -->
+						Site desenvolvido pelo habbo <a href="https://www.habbo.com.br/profile/BillyGates" target="_blank">BillyGates</a>.
+					</footer>
+				</article>
+			</section>
+			
+			<!-- Card 5 -->
+			<section id="card-5" class="col-12 col-sm-10 col-lg-8 mx-auto mt-3 mt-5 mt-sm-0 hide">
+				<div class="mt-5 mt-sm-0">
+					<article class="card">
+						<!-- Cabeçalhos -->
+						<header class="card-header text-center">
+							<img class="best-host d-none d-sm-block" src="_img/cup.png" width="14px" height="14px" data-toggle="modal" data-target="#modalBestHost">
+							
+							<span class="help d-none d-sm-block" data-toggle="modal" data-target="#modalDicas">?</span>
+							
+							<h1 class="d-inline">Resultados</h1>
+						</header>
+						
+						<!-- Corpo -->
+						<p class="card-body">
+							<!-- Resultados -->
+							<div class="row ml-1 d-flex justify-content-middle">
+								<!-- Mafiosos Protagonistas -->
+								<div class="col-11 col-sm-5 col-md-6 mb-3">
+									<!-- Primeiro -->
+									<div class="zebra-dark">
+										<span id="charCopy0" class="reset">
+											<h2 class="d-inline">Assassino:&nbsp;</h2>
+											<p class="d-inline" id="char0"></p>
+										</span>
+										<span id="show-info1" class="trans hide"> /</span>
+										<img class="copy-icon btn-copy" src="_img/copy.png" data-clipboard-action="copy" data-clipboard-target="#charCopy0">
+										<br>
+									</div>
+									
+									<!-- Segundo -->
+									<div class="zebra-light">
+										<span id="charCopy1" class="reset">
+											<h2 class="d-inline">Aprendiz:&nbsp;</h2>
+											<p class="d-inline" id="char1"></p>
+										</span>
+										<span id="show-info2" class="trans hide"> /</span>
+										<img class="copy-icon btn-copy" src="_img/copy.png" data-clipboard-action="copy" data-clipboard-target="#charCopy1">
+										<br>
+									</div>
+									
+									<!-- Terceiro -->
+									<div class="zebra-dark">
+										<span id="charCopy2">
+											<h2 class="d-inline">Silenciador:&nbsp;</h2>
+											<p class="d-inline" id="char2"></p>
+										</span>
+										<img class="copy-icon btn-copy" src="_img/copy.png" data-clipboard-action="copy" data-clipboard-target="#charCopy2">
+										<br>
+									</div>
+								</div>
+								
+								<!-- Civis Protagonistas -->
+								<div class="col-11 col-sm-5 col-md-5 mb-3">
+									<!-- Primeiro -->
+									<div class="zebra-dark">
+										<span id="charCopy3">
+											<h2 class="d-inline">Juíz:&nbsp;</h2>
+											<p class="d-inline" id="char3"></p>
+										</span>
+										<span id="show-info3" class="trans hide"> /</span>
+										<img class="copy-icon btn-copy" src="_img/copy.png" data-clipboard-action="copy" data-clipboard-target="#charCopy3">
+										<br>
+									</div>
+									
+									<!-- Segundo -->
+									<div class="zebra-light">
+										<span id="charCopy4">
+											<h2 class="d-inline">Policial:&nbsp;</h2>
+											<p class="d-inline" id="char4"></p>
+										</span>
+										<span id="show-info4" class="trans hide"> /</span>
+										<img class="copy-icon btn-copy" src="_img/copy.png" data-clipboard-action="copy" data-clipboard-target="#charCopy4">
+										<br>
+									</div>
+									
+									<!-- Terceiro -->
+									<div class="zebra-dark">
+										<span id="charCopy5">
+											<h2 class="d-inline">Anjo:&nbsp;</h2>
+											<p class="d-inline" id="char5"></p>
+										</span>
+										<img class="copy-icon btn-copy" src="_img/copy.png" data-clipboard-action="copy" data-clipboard-target="#charCopy5">
+										<br>
+									</div>
+								</div>
+								
+								<!-- Divisória -->
+								<hr class="col-8">
+								
+								<!-- Demais Civis -->
+								<div class="col-11 col-sm-5 col-md-6 mt-1 mb-3">
+									<!-- Primeiro -->
+									<div class="zebra-dark">
+										<span id="charCopy6">
+											<h2 class="d-inline">Aldeão:&nbsp;</h2>
+											<p class="d-inline" id="char6"></p>
+										</span>
+										<img class="copy-icon btn-copy" src="_img/copy.png" data-clipboard-action="copy" data-clipboard-target="#charCopy6">
+										<br>
+									</div>
+									
+									<!-- Segundo -->
+									<div class="zebra-light">
+										<span id="charCopy7">
+											<h2 class="d-inline">Espírito:&nbsp;</h2>
+											<p class="d-inline" id="char7"></p>
+										</span>
+										<img class="copy-icon btn-copy" src="_img/copy.png" data-clipboard-action="copy" data-clipboard-target="#charCopy7">
+										<br>
+									</div>
+									
+									<!-- Terceiro -->
+									<div class="zebra-dark">
+										<span id="charCopy8">
+											<h2 class="d-inline">Detetive:&nbsp;</h2>
+											<p class="d-inline" id="char8"></p>
+										</span>
+										<img class="copy-icon btn-copy" src="_img/copy.png" data-clipboard-action="copy" data-clipboard-target="#charCopy8">
+										<br>
+									</div>	
+									
+									<!-- Quarto -->
+									<div class="zebra-light">
+										<span id="extra1"></span>
+									</div>
+									
+									<!-- Quinto -->
+									<div class="zebra-dark">
+										<span id="extra3"></span>
+									</div>
+									
+									<!-- Sexto -->
+									<div class="zebra-light">
+										<span id="extra5"></span>
+									</div>
+									
+								</div>
+								
+								<!-- Demais mafiosos -->
+								<div class="col-11 col-sm-5 col-md-5 mt-1 mb-3">
+									<!-- Primeiro -->
+									<div class="zebra-dark">
+										<span id="charCopy9">
+											<h2 class="d-inline">Paralisador:&nbsp;</h2>
+											<p class="d-inline" id="char9"></p>
+										</span>
+										<img class="copy-icon btn-copy" src="_img/copy.png" data-clipboard-action="copy" data-clipboard-target="#charCopy9">
+										<br>
+									</div>
+									
+									<!-- Segundo -->
+									<div class="zebra-light">
+										<span id="charCopy10">
+											<h2 class="d-inline">Bruxo:&nbsp;</h2>
+											<p class="d-inline" id="char10"></p>
+										</span>
+										<img class="copy-icon btn-copy" src="_img/copy.png" data-clipboard-action="copy" data-clipboard-target="#charCopy10">
+										<br>
+									</div>
+									
+									<!-- Terceiro -->
+									<div class="zebra-dark">
+										<span id="charCopy11">
+											<h2 class="d-inline">Paparazzi:&nbsp;</h2>
+											<p class="d-inline" id="char11"></p>
+										</span>
+										<img class="copy-icon btn-copy" src="_img/copy.png" data-clipboard-action="copy" data-clipboard-target="#charCopy11">
+										<br>
+									</div>
+									
+									<!-- Quarto -->
+									<div class="zebra-light">
+										<span id="extra2"></span>
+									</div>
+									
+									<!-- Quinto -->
+									<div class="zebra-dark">
+										<span id="extra4"></span>
+									</div>
+									
+									<!-- Sexto -->
+									<div class="zebra-light">
+										<span id="extra6"></span>
+									</div>
+									
+								</div>
+							</div>
+							
+							<!-- Botões -->
+							<div class="row mx-1 mt-5" id="btnEnd">
+								<!-- Corrige -->
+								<div class="col-12 col-sm-4">
+									<a href="#card-4" class="btn btn-secondary w-100 my-1 btn-sm btnCorrige-fix" onclick="corrige();resetExtras();changeBtn();">
+										Corrigir
+									</a>
+								</div>
+								
+								<!-- Embaralha -->
+								<div class="col-12 col-sm-4">
+									<button class="btn btn-secondary w-100 my-1 btn-sm" type="button" onclick="shuffle(nicks);">
+										Embaralhar
+									</button>
+								</div>
+								
+								<!-- Novo -->
+								<div class="col-12 col-sm-4">
+									<button class="btn btn-secondary w-100 my-1 btn-sm" type="button" onclick="history.go(0)">
+										Novo
+									</button>
+								</div>
+							</div>
+						</p>
+						
+						<!-- Rodapé -->
+						<footer class="card-footer text-muted text-center">
+							<!-- Créditos -->
+							Site desenvolvido pelo habbo <a href="https://www.habbo.com.br/profile/BillyGates" target="_blank">BillyGates</a>.
+						</footer>
+					</article>
+				</div>
+			</section>
+		</div>
+		
+		<!-- Modal de Dicas -->
+		<div class="modal fade" id="modalDicas" tabindex="-1" role="dialog" aria-labelledby="modalDicasLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<!-- Modal title -->
+						<h5 class="modal-title" id="modalDicasLabel">Dicas</h5>
+						
+						<!-- Dismiss Header Button -->
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					
+					<!-- Modal Body -->
+					<div class="modal-body">
+						<p>
+							<ul id="modal-body">
+								<li>Use a tecla <kbd>TAB</kbd> para escrever os nicks, rapidamente;</li>
+								<li>Clique no botão <kbd>Corrigir</kbd>, caso alguém saia;</li>
+								<li>Clique em <kbd>Embaralhar</kbd>, caso vaze informações;</li>
+								<li>Clique no ícone <span class="d-inline"><img src="_img/copy.png" width="16px" height="16px"></span>, para copiar informações.</li>
+							</ul>
+						</p>
+					</div>
+					
+					<!-- Modal Footer -->
+					<div class="modal-footer">
+						<!-- Suporte -->
+						<a class="d-block sprt btn btn-secondary btn-fix" href="https://goo.gl/forms/KU7kZMsCC9NJqMQc2" target="_blank">Suporte</a>
+						
+						<!-- Modal Footer Dismiss Button -->
+						<button type="button" class="btn btn-success" data-dismiss="modal">Entendi</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Modal do melhor host -->
+		<div class="modal fade" id="modalBestHost" tabindex="-1" role="dialog" aria-labelledby="modalDicasLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<!-- Modal title -->
+						<h5 class="modal-title" id="modalDicasLabel">Melhores Hosts</h5>
+						
+						<!-- Modal Header Dismiss Button -->
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					
+					<!-- Modal Body -->
+					<div class="modal-body">
+						<div class="container">
+							<!-- Row -->
+							<div class="row text-center">
+								<!-- First Collumn -->
+								<div class="col-6">
+									<!-- Best Host Image -->
+									<a href="https://www.habbo.com.br/profile/william.aff" target="_blank">
+										<img src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=gif&user=william.aff&action=drk=667&direction=2&head_direction=2&gesture=sml&size=b">
+									</a>
+									
+									<!-- Best Host Nickname -->
+									<h2 class="modal-subtitle">William.aff</h2>
+								</div>
+								
+								<!-- Second Collumn -->
+								<div class="col-6">
+									<!-- Best Host Image -->
+									<a href="https://www.habbo.com.br/profile/nastuko" target="_blank">
+										<img src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=gif&user=Nastuko&action=drk=2&direction=4&head_direction=2&gesture=sml&size=b">
+									</a>
+									
+									<!-- Best Host Nickname -->
+									<h2 class="modal-subtitle">Nastuko</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Modal Footer -->
+					<div class="modal-footer">
+						<!-- Modal Footer Dismiss Button -->
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Idaí?</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	<!-- Scripts -->
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<!-- JQuery JS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Tether JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+		<!-- CopyToClipboard JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+		<!-- Scripts próprios -->
+		<script src="_js/snippets.js"></script>
+</body>
+</html>
