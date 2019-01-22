@@ -5,7 +5,6 @@ const { pathTo } = require('../utilities/paths');
 // Dependency tasks
 const { cleanBuild } = require('./folderCleaner');
 const { generateCode } = require('./codeGenerator');
-const { resizeImages } = require('./imageResizer');
 
 // Tasks
 function copyStaticFiles() {
