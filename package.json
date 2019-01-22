@@ -40,5 +40,7 @@
     "uglify-js": "^3.4.9",
     "uncss": "^0.16.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.2.1"
+  }
 }
