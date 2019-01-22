@@ -15,7 +15,7 @@ function copyStaticFiles() {
 
 const buildFiles = series(
                     cleanBuild, 
-                    parallel(copyStaticFiles, generateCode, resizeImages)
+                    parallel(copyStaticFiles, generateCode)
                   );
 
 module.exports = {
