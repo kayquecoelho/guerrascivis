@@ -1,8 +1,7 @@
 const pathTo = {
   staticFiles: [
     'src/index.html',
-    'src/favicon.png',
-    'src/assets/img'
+    'src/**/*.{ico,png,jpeg,gif,svg}',
   ]
 }
 
