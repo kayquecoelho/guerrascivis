@@ -14,12 +14,7 @@ sass.compiler = require('node-sass');
 function compileSass() {
   const sassResult = src('./src/scss/**/*.scss')
                       .pipe(sourcemaps.init())
-                      .pipe(sass())
-                        .on('error', err => {
-                          console.log(err.toString());
-              
-                          this.emit('end');
-                        })
+                      .pipe(sass().on('error', sass.logError))
                       .pipe(sourcemaps.write('./'));
 
   return sassResult
