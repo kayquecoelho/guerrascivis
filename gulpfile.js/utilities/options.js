@@ -17,7 +17,10 @@ const options = {
   postcss: {
     uncss: {
       html: ['src/index.html'],
-      ignore: []
+      ignore: [
+        'active',
+        'disabled'
+      ]
     }
   },
   imagemin: {

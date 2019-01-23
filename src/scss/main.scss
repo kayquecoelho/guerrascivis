@@ -1,8 +1,7 @@
 @charset 'utf-8';
 
 // Abstracts like: variables, mixins, functions and others utilities.
-@import 
-  './abstracts/variables/background';
+@import './abstracts/variables/grid';
 
 // Vendors like: Bootstrap, Normalize and JQuery-UI.
 @import 

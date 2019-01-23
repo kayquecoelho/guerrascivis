@@ -10,7 +10,7 @@
     <meta name='robots' content='index, follow'>
     <meta name='revisit-after' content='3 month'>
 
-		<link rel="icon" href="./favicon.ico" type="image/x-icon">
+		<link rel='icon' href='./favicon.ico' type='image/x-icon'>
 
     <!--build:css css/styles.min.css -->
     <link rel='stylesheet' href='css/main.css'>
@@ -19,9 +19,9 @@
     <title>Guerras Civis - Sorteador</title>
   </head>
 
-  <body class="d-flex flex-column justify-content-center">
+  <body class='d-flex flex-column justify-content-center'>
     
-    <div class="container">
+    <div class='container'>
       <header>
         <h1>Sorteador</h1>
       </header>
@@ -48,7 +48,69 @@
               <label for='info' class='custom-control-label'>Jogar com info!</label>
             </div>
 
-            <button class='btn btn-secondary' type='button'>Próximo</button>
+            <button class='btn btn-secondary btn-lg btn-block' type='button'>Próximo</button>
+          </fieldset>
+
+          <fieldset id='step2'>
+            <h2>Escolha mais <span>x</span>:</h2>
+            
+            <div id='step2' class='form-group row'>
+              <div class="btn-group-toggle col-sm-6 mb-2">
+                <label class='btn btn-dashed-outline--gray btn-block'>
+                  <input id='characterDemonio'
+                          type='checkbox'
+                          value='demonio'
+                          autocomplete="off"> Fada
+                </label>
+
+                <label class='btn btn-dashed-outline--gray btn-block'>
+                  <input id='characterDemonio'
+                          type='checkbox'
+                          value='demonio'
+                          autocomplete="off"> Escudeiro
+                </label>
+
+                <label class='btn btn-dashed-outline--gray btn-block'>
+                  <input id='characterDemonio'
+                          type='checkbox'
+                          value='demonio'
+                          autocomplete="off"> Justiceiro
+                </label>
+
+                <label class='btn btn-dashed-outline--gray btn-block'>
+                  <input id='characterDemonio'
+                          type='checkbox'
+                          value='demonio'
+                          autocomplete="off"> Testemunha
+                </label>
+              </div>
+
+              <div class="btn-group-toggle col-sm-6 mb-2">
+                <label class='btn btn-dashed-outline--gray btn-block'>
+                  <input id='characterDemonio'
+                          type='checkbox'
+                          value='demonio'
+                          autocomplete="off"> H. Bomba
+                </label>
+
+                <label class='btn btn-dashed-outline--gray btn-block'>
+                  <input id='characterDemonio'
+                          type='checkbox'
+                          value='demonio'
+                          autocomplete="off"> Psicopata
+                </label>
+
+                <label class='btn btn-dashed-outline--gray btn-block'>
+                  <input id='characterDemonio'
+                          type='checkbox'
+                          value='demonio'
+                          autocomplete="off"> Demonio
+                </label>
+              </div>
+            </div>
+
+            <button class='btn btn-secondary btn-lg' type='button'>Voltar</button>
+            <button class='btn btn-secondary btn-lg' type='button'>Próximo</button>
           </fieldset>
         </form>
 
