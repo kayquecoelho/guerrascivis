@@ -32,6 +32,24 @@
         </header>
 
         <form class='card-body'>
+          <fieldset id='step1' class='form-group'>
+            <label for='quantity'>Quantos vão jogar?</label>
+            <input id='quantity' 
+                    class='custom-range' 
+                    type='range' 
+                    min='12' 
+                    max='18' 
+                    step='2'
+                    value='12'>
+
+            <div class='custom-control custom-switch'>
+              <input id='info' class='custom-control-input' type='checkbox'>
+              
+              <label for='info' class='custom-control-label'>Jogar com info!</label>
+            </div>
+
+            <button class='btn btn-secondary' type='button'>Próximo</button>
+          </fieldset>
         </form>
 
         <footer class='card-footer'>
