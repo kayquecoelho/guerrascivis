@@ -222,8 +222,9 @@
             </div>
           </fieldset>
 
-          <fieldset id='result'>
-            <div class='row'>
+          <fieldset id='result' class='d-none'>
+            <div class="d-flex flex-column">
+              <div class='row mt-1'>
               <div class='col-sm-6 mb-2 w-100'>
                 <table class='table table-striped table-hover table-sm'>
                   <tbody>
@@ -274,16 +275,22 @@
                 <table class='table table-striped table-hover table-sm'>
                   <tbody>
                     <tr>
-                      <th scope='row' class='w-50'>Paralisador</th>
-                      <td>LoremIpsum</td>
+                        <th scope='row' class='w-50'>Paralisador<span class='sr-only'>:</span></th>
+                        <td>
+                          LoremIpsum<span class='sr-only'> /</span>
+                        </td>
                     </tr>
                     <tr>
-                      <th scope='row' class='w-50'>Bruxo</th>
-                      <td>LoremIpsum</td>
+                        <th scope='row' class='w-50'>Bruxo<span class='sr-only'>:</span></th>
+                        <td>
+                          LoremIpsum<span class='sr-only'> /</span>
+                        </td>
                     </tr>
                     <tr>
-                      <th scope='row' class='w-50'>Paparazzi</th>
-                      <td>LoremIpsum</td>
+                        <th scope='row' class='w-50'>Paparazzi<span class='sr-only'>:</span></th>
+                        <td>
+                          LoremIpsum<span class='sr-only'> /</span>
+                        </td>
                     </tr>
                   </tbody>
                 </table>
@@ -293,19 +300,40 @@
                 <table class='table table-striped table-hover table-sm'>
                   <tbody>
                     <tr>
-                      <th scope='row' class='w-50'>Aldeão</th>
-                      <td>LoremIpsum</td>
+                        <th scope='row' class='w-50'>Aldeão<span class='sr-only'>:</span></th>
+                        <td>
+                          LoremIpsum<span class='sr-only'> /</span>
+                        </td>
                     </tr>
                     <tr>
-                      <th scope='row' class='w-50'>Detetive</th>
-                      <td>LoremIpsum</td>
+                        <th scope='row' class='w-50'>Detetive<span class='sr-only'>:</span></th>
+                        <td>
+                          LoremIpsum<span class='sr-only'> /</span>
+                        </td>
                     </tr>
                     <tr>
-                      <th scope='row' class='w-50'>Espírito</th>
-                      <td>LoremIpsum</td>
+                        <th scope='row' class='w-50'>Espírito<span class='sr-only'>:</span></th>
+                        <td>
+                          LoremIpsum<span class='sr-only'> /</span>
+                        </td>
                     </tr>
                   </tbody>
                 </table>
+              </div>
+            </div>
+                  
+              <div class='btn-toolbar align-self-center' 
+                    role='toolbar' 
+                    aria-label='Toolbar with button groups'>
+
+                <div class='btn-group btn-group-sm mr-2' role='group' aria-label='Basic example'>
+                  <button type='button' class='btn btn-secondary'>Corrige</button>
+                  <button type='button' class='btn btn-secondary'>Embaralha</button>
+                </div>
+
+                <div class='btn-group btn-group-sm' role='group' aria-label='Basic example'>
+                  <button type='button' class='btn btn-secondary'>Novo</button>
+                </div>
               </div>
             </div>
           </fieldset>
