@@ -31,24 +31,36 @@
           <h1 id='content-title'>Title</h1>
         </header>
 
-        <form class='card-body d-flex flex-column'>
-          <fieldset id='step1' class='form-group'>
-            <label for='quantity'>Quantos vão jogar?</label>
-            <input id='quantity' 
-                    class='custom-range' 
-                    type='range' 
-                    min='12' 
-                    max='18' 
-                    step='2'
-                    value='12'>
+          <fieldset id='step1' class=''>
+            <div class="d-flex flex-column align-items-center justify-content-around" style='min-height: 300px'>
+              <h2 class='d-block h6 font-weight-bold'>
+                Quantos vão jogar?
+              </h2>
 
-            <div class='custom-control custom-switch'>
-              <input id='info' class='custom-control-input' type='checkbox'>
+              <div class="d-flex">
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="quantity-opt1" name="quantity" class="custom-control-input">
+                  <label class="custom-control-label" for="quantity-opt1">12</label>
+                </div>
               
-              <label for='info' class='custom-control-label'>Jogar com info!</label>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="quantity-opt2" name="quantity" class="custom-control-input">
+                  <label class="custom-control-label" for="quantity-opt2">14</label>
             </div>
 
-            <button class='btn btn-secondary btn-lg btn-block' type='button'>Próximo</button>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="quantity-opt3" name="quantity" class="custom-control-input">
+                  <label class="custom-control-label" for="quantity-opt3">16</label>
+                </div>
+
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="quantity-opt4" name="quantity" class="custom-control-input">
+                  <label class="custom-control-label" for="quantity-opt4">18</label>
+                </div>
+              </div>
+
+              <button class='btn btn-secondary btn-block align-self-end' type='button'>Próximo</button>
+            </div>
           </fieldset>
 
           <fieldset id='step2'>
