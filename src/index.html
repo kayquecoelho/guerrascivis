@@ -129,10 +129,11 @@
             </div>
           </fieldset>
 
-          <fieldset id='step3'>
-            <h2>Falta preencher <span>x</span>:</h2>
+          <fieldset id='step3' class='d-none'>
+            <div class='d-flex flex-column'>
+              <h2 class='d-block text-center h6 font-weight-bold'>Falta preencher <span>x</span>:</h2>
 
-            <div class='form-row'>
+              <div class='form-row my-3'>
               <div class='col-sm-6 mb-1'>
                 <input class='form-control form-control-lg'
                         type='text'
@@ -195,11 +196,17 @@
               </div>
             </div>
 
-            <div class='btn-toolbar' role='toolbar' aria-label='Toolbar with button groups'>
-              <div class='btn-group btn-group-lg mr-2' role='group' aria-label='Basic example'>
+              <div class='btn-toolbar align-content-stretch' 
+                    role='toolbar' 
+                    aria-label='Toolbar with button groups'>
+
+                <div class='btn-group w-100' role='group' aria-label='Basic example'>
                 <button type='button' class='btn btn-secondary'>Voltar</button>
                 <button type='button' class='btn btn-secondary'>Sortear</button>
               </div>
+            </div>
+
+              <button type='button' class='btn btn-secondary w-100 d-none'>Salvar</button>
             </div>
           </fieldset>
 
