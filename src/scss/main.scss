@@ -5,10 +5,10 @@
 @import './abstracts/variables/components';
 
 // Vendors like: Bootstrap, Normalize and JQuery-UI.
-@import 
-  './vendors/bootstrap';
+@import './vendors/bootstrap';
 
 // Boilerplate code like: resets and typography.
+@import './base/reset';
 @import './base/typography';
 
 // Focuses on the macro layout, such as things like: _header.scss, _grid.scss and _forms.scss.
@@ -16,8 +16,8 @@
 //   './layout/';
 
 // Focuses on the micro layout, such as widgets like: _media.scss, _thumbnails.scss and _buttons.scss.
-@import 
-  './components/button.scss';
+@import './components/button';
+@import './components/card';
 
 // Page specific styles, such as: _home.scss and _contact.scss.
 // @import 
