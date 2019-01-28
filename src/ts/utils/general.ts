@@ -1,4 +1,4 @@
-import { thirdStep, contentTitle } from './domElements';
+import { animate } from './animation';
 
 // How many players will play
 function playersCount(): number {
@@ -33,15 +33,11 @@ function focusOn(id: string): void {
 }
 
 function changeText(elementId: string, msg: string) {
-  contentTitle.classList.add('anim-pulse');
+  const element = document.getElementById(elementId);
 
-  contentTitle.addEventListener('animationend', () => {
-    contentTitle.classList.remove('anim-pulse');
+  animate(element, 'anim-pulse');
 
-    contentTitle.removeEventListener('animationend', () => {});
-  });
-
-  contentTitle.innerHTML = msg;
+  element.innerHTML = msg;
   focusOn(elementId);
 }
 

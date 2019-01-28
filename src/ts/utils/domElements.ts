@@ -85,7 +85,7 @@ const outputScreen = {
   }
 }
 
-const contentTitle = document.querySelector('#content-title');
+const contentTitle: HTMLElement = document.querySelector('#content-title');
 
 export {
   firstStep,
