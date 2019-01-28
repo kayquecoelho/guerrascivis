@@ -1,5 +1,6 @@
 // Official Gulp plugins
 const sourcemaps = require('gulp-sourcemaps');
+const purgecss = require('gulp-purgecss')
 const ghPages = require('gulp-gh-pages');
 const htmlmin = require('gulp-htmlmin');
 const ts = require('gulp-typescript');
@@ -9,12 +10,13 @@ const cache = require('gulp-cache');
 const sass = require('gulp-sass');
 const gulpIf = require('gulp-if');
 
-const { postcss, autoprefixer, uncss, cssnano } = require('./postcss');
+const { postcss, autoprefixer, cssnano } = require('./postcss');
 const { imagemin, imageminPngquant } = require('./imagemin');
 
 module.exports = {
   // Official
   sourcemaps,
+  purgecss,
   htmlmin,
   ts,
   uglify,
@@ -28,7 +30,6 @@ module.exports = {
   // Third party dependency plugins
     // PostCSS
     autoprefixer,
-    uncss,
     cssnano,
     // ImageMin
     imageminPngquant

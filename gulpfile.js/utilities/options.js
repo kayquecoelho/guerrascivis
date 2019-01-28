@@ -14,24 +14,14 @@ const options = {
     sortAttributes: true,
     sortClassName: true
   },
-  postcss: {
-    uncss: {
-      html: ['src/index.html'],
-      ignore: [
-        'active',
-        'disabled',
-        'anim-shake',
-        'anim-pulse',
-        'text-danger',
-        'col-sm-6',
-        'mb-1',
-        'form-control',
-        'form-control-lg',
-        'is-invalid',
-        'fade',
-        'show'
-      ]
-    }
+  purgecss: {
+    content: [
+      './build/**/*.html', 
+      './build/js/**/*.js',
+      './node_modules/bootstrap/js/dist/util.js',
+      './node_modules/bootstrap/js/dist/modal.js'
+    ],
+    css: ['build/css/main.css']
   },
   imagemin: {
     verbose: true,
