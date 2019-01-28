@@ -19,7 +19,17 @@ const options = {
       html: ['src/index.html'],
       ignore: [
         'active',
-        'disabled'
+        'disabled',
+        'anim-shake',
+        'anim-pulse',
+        'text-danger',
+        'col-sm-6',
+        'mb-1',
+        'form-control',
+        'form-control-lg',
+        'is-invalid',
+        'fade',
+        'show'
       ]
     }
   },
