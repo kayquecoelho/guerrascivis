@@ -4,15 +4,10 @@ const { options } = require('../utilities/options');
 
 // Plugins
 const { useref, gulpIf, uglify, htmlmin, purgecss } = require('../plugins/plugins.manifest');
+const { postcss } = require('../plugins/postcss');
 
 // Main task
 function optimizeCode() {
-  const postcssPlugins = [
-    cssnano(),
-    autoprefixer(),
-    uncss(options.postcss.uncss),
-  ];
-
   return src('build/*.html')
           .pipe(useref())
           .pipe(gulpIf('*.js', uglify()))

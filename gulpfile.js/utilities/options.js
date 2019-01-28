@@ -1,5 +1,6 @@
 // Plugins
 const { imageminPngquant } = require('../plugins/imagemin');
+const { autoprefixer, cssnano } = require('../plugins/postcss');
 
 const options = {
   htmlmin: {
@@ -44,6 +45,10 @@ const options = {
       ]
     },
   },
+  postcssPlugins: [
+    cssnano(),
+    autoprefixer()
+  ],
   browserSync: {
     init: {
       server: {
