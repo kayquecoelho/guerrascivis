@@ -33,7 +33,7 @@ function focusOn(id: string): void {
 }
 
 function changeText(elementId: string, msg: string) {
-  const element = document.getElementById(elementId);
+  const element: HTMLElement = document.querySelector(elementId);
 
   animate(element, 'anim-pulse');
 
