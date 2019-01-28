@@ -1,6 +1,7 @@
 // Utilities
 const { src, dest } = require('../utilities/api');
 const { options } = require('../utilities/options');
+const { globFor } = require('../utilities/paths');
 
 // Plugins
 const { cache } = require('../plugins/plugins.manifest');
@@ -16,7 +17,7 @@ function optimizeImg() {
     imageminPngquant()
   ]
 
-  return src('build/**/*.{jpg,png,gif}')
+  return src(`build/${globFor.images}`)
           .pipe(cache(imagemin(imageminPlugins, options.imagemin)))
           .pipe(dest('dist/'));
 }

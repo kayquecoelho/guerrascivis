@@ -5,11 +5,11 @@ const { series } = require('./utilities/api');
 const { runOptmizer } = require('./tasks/optmizer');
 const { watchTasks } = require('./tasks/watcher');
 const { deployFiles } = require('./tasks/deployer');
-const { buildFiles } = require('./tasks/builder');
+const { buildFiles, copyBuildStaticFiles } = require('./tasks/builder');
 const { buildSassDoc } = require('./tasks/sassDoc');
 const { cleanDist } = require('./tasks/folderCleaner');
 
-const optmizeFiles = series(buildFiles, cleanDist, runOptmizer);
+const optmizeFiles = series(buildFiles, cleanDist, copyBuildStaticFiles, runOptmizer);
 
 // Public tasks
 exports.build = buildFiles;

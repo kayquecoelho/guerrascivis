@@ -1,5 +1,6 @@
 // Utilities
 const { src, dest } = require('../utilities/api');
+const { pathTo } = require('../utilities/paths');
 
 // Plugins
 const { ts, sourcemaps } = require('../plugins/plugins.manifest');
@@ -9,7 +10,7 @@ const { ts, sourcemaps } = require('../plugins/plugins.manifest');
 const tsProject = ts.createProject('tsconfig.json');
 
 function compileTS() {
-  const tsResult = src("./src/ts/**/*.ts")
+  const tsResult = src(pathTo.tsFiles)
                     .pipe(sourcemaps.init())
                     .pipe(tsProject())
                     .pipe(sourcemaps.write('./'));

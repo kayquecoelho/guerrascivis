@@ -1,6 +1,6 @@
 // Official Gulp plugins
 const sourcemaps = require('gulp-sourcemaps');
-const purgecss = require('gulp-purgecss')
+const purgecss = require('gulp-purgecss');
 const ghPages = require('gulp-gh-pages');
 const htmlmin = require('gulp-htmlmin');
 const ts = require('gulp-typescript');

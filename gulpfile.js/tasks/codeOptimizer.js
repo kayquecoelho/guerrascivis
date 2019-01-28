@@ -8,6 +8,7 @@ const { postcss } = require('../plugins/postcss');
 
 // Main task
 function optimizeCode() {
+  
   return src('build/*.html')
           .pipe(useref())
           .pipe(gulpIf('*.js', uglify()))

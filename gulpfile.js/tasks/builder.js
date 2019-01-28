@@ -7,18 +7,25 @@ const { cleanBuild } = require('./folderCleaner');
 const { generateCode } = require('./codeGenerator');
 
 // Tasks
-function copyStaticFiles() {
+function copySourceStaticFiles() {
 
-  return src(pathTo.staticFiles)
+  return src(pathTo.srcStaticFiles)
           .pipe(dest('build/'));
+}
+
+function copyBuildStaticFiles() {
+
+  return src(pathTo.buildStaticFiles)
+          .pipe(dest('dist/'));
 }
 
 const buildFiles = series(
                     cleanBuild, 
-                    parallel(copyStaticFiles, generateCode)
+                    parallel(copySourceStaticFiles, generateCode)
                   );
 
 module.exports = {
   buildFiles,
-  copyStaticFiles
+  copySourceStaticFiles,
+  copyBuildStaticFiles
 }
