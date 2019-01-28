@@ -1,4 +1,4 @@
-import './step1';
-import './step2';
-import './step3';
-import './result';
+import './step1/index';
+import './step2/index';
+import './step3/index';
+import './output/index';
