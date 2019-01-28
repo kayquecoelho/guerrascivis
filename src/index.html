@@ -22,12 +22,25 @@
   <body class='d-flex flex-column justify-content-center'>
     <div class='container'>      
       <main class='card mx-auto my-5'>
-        <header class='card-header'>
-          <h1 id='content-title' class='text-center font-weight-bold h3'>Passo I</h1>
+        <header class='card-header d-flex flex-row justify-content-center'>
+          <h1 id='content-title' class='font-weight-bold h3'>Passo I</h1>
+          <!-- <span class='small align-self-center position-absolute text-secondary border border-secondary rounded-circle px-1 mx-3 text-center' 
+                style='right:0'>?</span> -->
+
+          <svg class="icon icon-help-circle" data-toggle="modal" data-target="#helpModal">
+            <use xlink:href="#icon-help-circle"></use>
+
+            <symbol id="icon-help-circle" viewBox="0 0 24 24">
+              <title>help-circle</title>
+              <path d="M12 1c-6.1 0-11 4.9-11 11s4.9 11 11 11 11-4.9 11-11-4.9-11-11-11zM12 21c-5 0-9-4-9-9s4-9 9-9c5 0 9 4 9 9s-4 9-9 9z"></path>
+              <path d="M13.2 6.2c-2.1-0.7-4.4 0.4-5.1 2.4-0.1 0.6 0.1 1.2 0.7 1.3 0.5 0.2 1.1-0.1 1.3-0.6 0.4-1 1.5-1.6 2.6-1.2 0.8 0.3 1.3 1 1.3 1.9 0 1-1.7 1.8-2.3 2.1-0.5 0.2-0.8 0.7-0.6 1.3 0.1 0.4 0.5 0.7 0.9 0.7 0.1 0 0.2 0 0.3-0.1 0.4-0.1 3.7-1.3 3.7-3.9-0.1-1.8-1.2-3.3-2.8-3.9z"></path>
+              <path d="M11.3 16.3c-0.2 0.2-0.3 0.4-0.3 0.7s0.1 0.5 0.3 0.7c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3c0.2-0.2 0.3-0.5 0.3-0.7s-0.1-0.5-0.3-0.7c-0.4-0.4-1-0.4-1.4 0z"></path>
+            </symbol>
+          </svg>
         </header>
 
         <form class='card-body'>
-          <fieldset id='step1' class=''>
+          <fieldset id='firstStep' class='fade show'>
             <div class='d-flex flex-column align-items-center justify-content-around' style='min-height: 300px'>
               <h2 class='d-block h6 font-weight-bold'>
                 Quantos vão jogar?
@@ -75,158 +88,106 @@
                 </div>
               </div>
 
-              <button id='step1Next' class='btn btn-secondary btn-block align-self-end' type='button'>Próximo</button>
+              <button id='firstStepNextButton' class='btn btn-secondary btn-block align-self-end' type='button'>Próximo</button>
             </div>
           </fieldset>
 
-          <fieldset id='step2' class='d-none'>
+          <fieldset id='secondStep' class='fade d-none'>
             <div class='d-flex flex-column'>
-              <h2 class='d-block text-center h6 font-weight-bold'>Escolha <span>x</span>:</h2>
+              <h2 id='secondStepFeedbackMsg' class='text-center h6 font-weight-bold'>Escolha <span>x</span>:</h2>
               
               <div class='form-group row mt-4'>
-                <div class='btn-group-toggle col-sm-6 mb-2'>
+                <div id='civilExtraRoles' class='btn-group-toggle col-sm-6 mb-2'>
                   <label class='btn btn-dashed-outline--gray btn-block'>
-                    <input id='characterFada'
+                    <input id='fairy'
+                            name='extraRole'
                             type='checkbox'
-                            value='fada'
+                            value='Fada'
                             autocomplete='off'>Fada
                   </label>
 
                   <label class='btn btn-dashed-outline--gray btn-block'>
-                    <input id='characterEscudeiro'
+                    <input id='shield'
+                            name='extraRole'
                             type='checkbox'
-                            value='escudeiro'
+                            value='Escudeiro'
                             autocomplete='off'>Escudeiro
                   </label>
 
                   <label class='btn btn-dashed-outline--gray btn-block'>
-                    <input id='characterJusticeiro'
+                    <input id='vigilante'
+                            name='extraRole'
                             type='checkbox'
-                            value='justiceiro'
+                            value='Justiceiro'
                             autocomplete='off'>Justiceiro
                   </label>
 
                   <label class='btn btn-dashed-outline--gray btn-block'>
-                    <input id='characterTestemunha'
+                    <input id='witness'
+                            name='extraRole'
                             type='checkbox'
-                            value='testemunha'
+                            value='Testemunha'
                             autocomplete='off'>Testemunha
                   </label>
                 </div>
 
-                <div class='btn-group-toggle col-sm-6 mb-2'>
+                <div id='mafiaExtraRoles' class='btn-group-toggle col-sm-6 mb-2'>
                   <label class='btn btn-dashed-outline--gray btn-block'>
-                    <input id='characterHomemBomba'
+                    <input id='suicideBomber'
+                            name='extraRole'
                             type='checkbox'
-                            value='homem bomba'
+                            value='H. Bomba'
                             autocomplete='off'>H. Bomba
                   </label>
 
                   <label class='btn btn-dashed-outline--gray btn-block'>
-                    <input id='characterPsicopata'
+                    <input id='psycho'
+                            name='extraRole'
                             type='checkbox'
-                            value='psicopata'
+                            value='Psicopata'
                             autocomplete='off'>Psicopata
                   </label>
 
                   <label class='btn btn-dashed-outline--gray btn-block'>
-                    <input id='characterDemonio'
+                    <input id='demon'
+                            name='extraRole'
                             type='checkbox'
-                            value='demônio'
+                            value='Demônio'
                             autocomplete='off'>Demônio
                   </label>
                 </div>
               </div>
 
-              <div class='btn-group' role='group' aria-label='Basic example'>
-                <button id='step2Previous' type='button' class='btn btn-secondary'>Voltar</button>
-                <button id='step2Next' type='button' class='btn btn-secondary'>Próximo</button>
+              <div class='btn-group' role='group' aria-label='Button group.'>
+                <button id='secondStepPreviousButton' type='button' class='btn btn-secondary'>Voltar</button>
+                <button id='secondStepNextButton' type='button' class='btn btn-secondary'>Próximo</button>
               </div>
             </div>
           </fieldset>
 
-          <fieldset id='step3' class='d-none'>
+          <fieldset id='thirdStep' class='fade d-none'>
             <div class='d-flex flex-column'>
-              <h2 class='d-block text-center h6 font-weight-bold'>Falta preencher <span>x</span>:</h2>
+              <h2 id='thirdStepFeedbackMsg' class='text-center h6 font-weight-bold'>Falta preencher <span>x</span>:</h2>
 
-              <div class='form-row my-3'>
-                <div class='col-sm-6 mb-1'>
-                  <input class='form-control form-control-lg'
-                          type='text'
-                          placeholder='Digite aqui...'>
-                </div>
-
-                <div class='col-sm-6 mb-1'>
-                  <input class='form-control form-control-lg'
-                          type='text'>
-                </div>
-
-                <div class='col-sm-6 mb-1'>
-                  <input class='form-control form-control-lg'
-                          type='text'>
-                </div>
-
-                <div class='col-sm-6 mb-1'>
-                  <input class='form-control form-control-lg'
-                          type='text'>
-                </div>
-
-                <div class='col-sm-6 mb-1'>
-                  <input class='form-control form-control-lg'
-                          type='text'>
-                </div>
-
-                <div class='col-sm-6 mb-1'>
-                  <input class='form-control form-control-lg'
-                          type='text'>
-                </div>
-
-                <div class='col-sm-6 mb-1'>
-                  <input class='form-control form-control-lg'
-                          type='text'>
-                </div>
-
-                <div class='col-sm-6 mb-1'>
-                  <input class='form-control form-control-lg'
-                          type='text'>
-                </div>
-
-                <div class='col-sm-6 mb-1'>
-                  <input class='form-control form-control-lg'
-                          type='text'>
-                </div>
-
-                <div class='col-sm-6 mb-1'>
-                  <input class='form-control form-control-lg'
-                          type='text'>
-                </div>
-
-                <div class='col-sm-6 mb-1'>
-                  <input class='form-control form-control-lg'
-                          type='text'>
-                </div>
-
-                <div class='col-sm-6 mb-1'>
-                  <input class='form-control form-control-lg'
-                          type='text'>
-                </div>
+              <div id='nicknamesInputContainer' class='form-row my-3'>
+                <!-- Nicknames input is going to be generated here, by JS -->
               </div>
 
               <div class='btn-toolbar align-content-stretch' 
                     role='toolbar' 
-                    aria-label='Toolbar with button groups'>
+                    aria-label='Toolbar with button groups.'>
 
-                <div class='btn-group w-100' role='group' aria-label='Basic example'>
-                  <button id='step3Previous' type='button' class='btn btn-secondary'>Voltar</button>
-                  <button id='step3Next' type='button' class='btn btn-secondary'>Sortear</button>
+                <div class='btn-group w-100' role='group' aria-label='Button group.'>
+                  <button id='thirdStepPreviousButton' type='button' class='btn btn-secondary'>Voltar</button>
+                  <button id='shuffleNicknamesButton' type='button' class='btn btn-secondary'>Sortear</button>
                 </div>
               </div>
 
-              <button type='button' class='btn btn-secondary w-100 d-none'>Salvar</button>
+              <button id='thirdStepSaveButton' type='button' class='btn btn-secondary btn-block d-none'>Salvar</button>
             </div>
           </fieldset>
 
-          <fieldset id='spinner' class='d-none'>
+          <fieldset id='spinner' class='fade d-none'>
             <div class='d-flex flex-column justify-content-center align-items-center'
                   style='min-height: 300px'>
               <div class='spinner-border text-secondary' 
@@ -238,7 +199,7 @@
             </div>
           </fieldset>
 
-          <fieldset id='result' class='d-none'>
+          <fieldset id='outputScreen' class='fade d-none'>
             <div class='d-flex flex-column'>
               <div class='row mt-1'>
                 <div class='col-sm-6 mb-2 w-100'>
@@ -246,19 +207,15 @@
                     <tbody>
                       <tr>
                         <th scope='row' class='w-50'>Assassino<span class='sr-only'>:</span></th>
-                        <td>
-                          LoremIpsum<span class='sr-only'> /</span>
-                        </td>
+                        <td><!-- Nicknames will be dinamically placed here --></td>
                       </tr>
                       <tr>
                         <th scope='row' class='w-50'>Aprendiz<span class='sr-only'>:</span></th>
-                        <td>
-                          LoremIpsum<span class='sr-only'> /</span>
-                        </td>
+                        <td><!-- Nicknames will be dinamically placed here --></td>
                       </tr>
                       <tr>
                         <th scope='row' class='w-50'>Silenciador<span class='sr-only'>:</span></th>
-                        <td>LoremIpsum</td>
+                        <td><!-- Nicknames will be dinamically placed here --></td>
                       </tr>
                     </tbody>
                   </table>
@@ -269,19 +226,15 @@
                     <tbody>
                       <tr>
                         <th scope='row' class='w-50'>Juíz<span class='sr-only'>:</span></th>
-                        <td>
-                          LoremIpsum<span class='sr-only'> /</span>
-                        </td>
+                        <td><!-- Nicknames will be dinamically placed here --></td>
                       </tr>
                       <tr>
                         <th scope='row' class='w-50'>Policial<span class='sr-only'>:</span></th>
-                        <td>
-                          LoremIpsum<span class='sr-only'> /</span>
-                        </td>
+                        <td><!-- Nicknames will be dinamically placed here --></td>
                       </tr>
                       <tr>
                         <th scope='row' class='w-50'>Anjo<span class='sr-only'>:</span></th>
-                        <td>LoremIpsum</td>
+                        <td><!-- Nicknames will be dinamically placed here --></td>
                       </tr>
                     </tbody>
                   </table>
@@ -289,24 +242,18 @@
                 
                 <div class='col-sm-6 mb-2 w-100'>
                   <table class='table table-striped table-hover table-sm'>
-                    <tbody>
+                    <tbody id='mafiaRolesContainer'>
                       <tr>
                         <th scope='row' class='w-50'>Paralisador<span class='sr-only'>:</span></th>
-                        <td>
-                          LoremIpsum<span class='sr-only'> /</span>
-                        </td>
+                        <td><!-- Nicknames will be dinamically placed here --></td>
                       </tr>
                       <tr>
                         <th scope='row' class='w-50'>Bruxo<span class='sr-only'>:</span></th>
-                        <td>
-                          LoremIpsum<span class='sr-only'> /</span>
-                        </td>
+                        <td><!-- Nicknames will be dinamically placed here --></td>
                       </tr>
                       <tr>
                         <th scope='row' class='w-50'>Paparazzi<span class='sr-only'>:</span></th>
-                        <td>
-                          LoremIpsum<span class='sr-only'> /</span>
-                        </td>
+                        <td><!-- Nicknames will be dinamically placed here --></td>
                       </tr>
                     </tbody>
                   </table>
@@ -314,24 +261,18 @@
                 
                 <div class='col-sm-6 mb-2 w-100'>
                   <table class='table table-striped table-hover table-sm'>
-                    <tbody>
+                    <tbody id='civilRolesContainer'>
                       <tr>
                         <th scope='row' class='w-50'>Aldeão<span class='sr-only'>:</span></th>
-                        <td>
-                          LoremIpsum<span class='sr-only'> /</span>
-                        </td>
+                        <td><!-- Nicknames will be dinamically placed here --></td>
                       </tr>
                       <tr>
                         <th scope='row' class='w-50'>Detetive<span class='sr-only'>:</span></th>
-                        <td>
-                          LoremIpsum<span class='sr-only'> /</span>
-                        </td>
+                        <td><!-- Nicknames will be dinamically placed here --></td>
                       </tr>
                       <tr>
                         <th scope='row' class='w-50'>Espírito<span class='sr-only'>:</span></th>
-                        <td>
-                          LoremIpsum<span class='sr-only'> /</span>
-                        </td>
+                        <td><!-- Nicknames will be dinamically placed here --></td>
                       </tr>
                     </tbody>
                   </table>
@@ -340,28 +281,64 @@
                   
               <div class='btn-toolbar align-self-center' 
                     role='toolbar' 
-                    aria-label='Toolbar with button groups'>
+                    aria-label='Toolbar with button groups.'>
 
-                <div class='btn-group btn-group-sm mr-2' role='group' aria-label='Basic example'>
-                  <button id='fixButton' type='button' class='btn btn-secondary'>Corrige</button>
-                  <button type='button' class='btn btn-secondary'>Embaralha</button>
+                <div class='btn-group btn-group-sm mr-2' role='group' aria-label='Button group.'>
+                  <button id='fixNicknamesButton' type='button' class='btn btn-secondary'>Corrige</button>
+                  <button  id='ReshuffleNicknamesButton'type='button' class='btn btn-secondary'>Embaralha</button>
                 </div>
 
-                <div class='btn-group btn-group-sm' role='group' aria-label='Basic example'>
-                  <button type='button' class='btn btn-secondary'>Novo</button>
+                <div class='btn-group btn-group-sm' role='group' aria-label='Button group.'>
+                  <button id='newGameButton' type='button' class='btn btn-secondary'>Novo</button>
                 </div>
               </div>
             </div>
           </fieldset>
         </form>
 
+        <div class="modal fade" 
+              id="helpModal" 
+              tabindex="-1" 
+              role="dialog" 
+              aria-labelledby="modalLabel" 
+              aria-hidden="true">
+
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="h5 modal-title font-weight-bold" id="modalLabel">Ajuda</h1>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="modal-body">
+                <ul>
+                  <li class='py-2'>Use a tecla <kbd>TAB</kbd> para escrever os nicks, rapidamente;</li>
+                  <li class='py-2'>Clique no botão <kbd>Corrige</kbd>, caso alguém saia;</li>
+                  <li class='py-2'>Clique em <kbd>Embaralha</kbd>, caso vaze informações;</li>
+                  <li class='py-2'>Basta um clique sobre o nickname do jogador, para selecionar ele e seu cargo.</li>
+                </ul>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <footer class='card-footer text-center text-muted'>
           Site desenvolvido pelo habbo <a class='text-decoration-none text-dark font-weight-bold' href='https://www.habbo.com.br/profile/BillyGates' target='_blank'>BillyGates</a>.
         </footer>
       </main>
     </div>
-
+    
     <!--build:js js/all.min.js -->
+    <script src='../node_modules/jquery/dist/jquery.slim.js'></script>
+    <script src='../node_modules/bootstrap/js/dist/util.js'></script>
+    <script src='../node_modules/bootstrap/js/dist/modal.js'></script>
     <script src='js/all.js'></script>
     <!-- endbuild -->
   </body>
