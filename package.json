@@ -41,6 +41,7 @@
     "uncss": "^0.16.2"
   },
   "dependencies": {
-    "bootstrap": "^4.2.1"
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1"
   }
 }
