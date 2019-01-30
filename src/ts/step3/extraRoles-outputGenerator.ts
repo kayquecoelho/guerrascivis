@@ -5,7 +5,7 @@ function generateMarkup(array: string[]) {
 
   array.forEach(chosenRole => {
     markup += `<tr>
-                  <th scope='row' class='w-50'>${chosenRole}<span class='sr-only'>:</span></th>
+                  <th scope='row' class='w-50'>${chosenRole}<span class='sr-only'>:&nbsp;</span></th>
                   <td><!-- Nicknames will be dinamically placed here --></td>
                 </tr>`
   });
