@@ -77,8 +77,8 @@ const outputScreen = {
   get shuffledNicknameValues() {
     return outputScreen.nicknameOutputFields
                         .map(outputField => {
-                          // Rreturns only shuffled player nicknames.
-                          const nickname = outputField.innerText.replace(` /`, '');
+                          // Rreturns only shuffled player nicknames. (don't touch the whitespaces)
+                          const nickname = outputField.innerText.replace(` / `, '');
   
                           return nickname
                         })
